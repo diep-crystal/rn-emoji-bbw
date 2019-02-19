@@ -71,13 +71,13 @@ class Emoticons extends React.Component {
     }
 
     componentDidUpdate() {
-        Animated.timing(
-            this.state.position,
-            {
-                duration: 100,
-                toValue: this.props.show ? 0 : -300
-            }
-        ).start();
+        // Animated.timing(
+        //     this.state.position,
+        //     {
+        //         duration: 100,
+        //         toValue: this.props.show ? 0 : -300
+        //     }
+        // ).start();
     }
 
     _charFromCode(utf16) {
@@ -265,7 +265,7 @@ class Emoticons extends React.Component {
         }
 
         return (
-            <Animated.View style={style}>
+            <Animated.View style={style} onLayout={this.props.onLayout}>
                 <ScrollableTabView
                     tabBarPosition='overlayBottom'
                     renderTabBar={() => <TabBar {...this.props} onPlusPress={this._onPlusPress.bind(this)} />}
