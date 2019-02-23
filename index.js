@@ -293,7 +293,6 @@ Emoticons.propTypes = {
     asyncRender: PropTypes.bool
 };
 
-
 export default Emoticons;
 export {
     stringify as stringify,
