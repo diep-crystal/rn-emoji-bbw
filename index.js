@@ -259,9 +259,9 @@ class Emoticons extends React.Component {
             });
         }
 
-        let style = [styles.container, { bottom: this.state.position }, this.props.style]
-        if (!this.props.show) {
-            style = [styles.container, { bottom: this.state.position, height: 0 }, this.props.style]
+        let style = [styles.container, { bottom: this.state.position }]
+        if (Platform.OS === 'android') {
+            style = [styles.container, { bottom: this.state.position, height: this.props.height }]
         }
 
         return (
